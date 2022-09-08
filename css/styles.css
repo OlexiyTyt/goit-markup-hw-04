@@ -193,6 +193,7 @@ body {
 
 .section {
   padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .non-margin {
@@ -304,6 +305,17 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.stuff-card {
+  width: 270px;
+  height: 428px;
+  background-color: var(--primary-white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 0px 0px 4px 4px;
+}
+.coworkers p {
+  padding-bottom: 16px;
 }
 .text {
   margin-bottom: 0px;
@@ -485,4 +497,74 @@ body {
   border-top: transparent;
   padding: 20px 24px;
   width: 370px;
+}
+
+.clients {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+}
+
+.clients .item {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  width: calc((100%-150px) / 6);
+  height: 92px;
+  align-items: center;
+}
+.clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-container {
+  width: 1170px;
+  height: 184px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 206px;
+  height: 44px;
+}
+
+.list-item.item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--secondary-background-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-text-color);
+}
+
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: var(--primary-white-color);
+}
+
+.social-image {
+  fill: var(--secondary-text-color);
 }
