@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .list {
@@ -96,7 +97,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  width: 1200px;
+  width: 1170px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -111,9 +112,9 @@ body {
 .page-header {
   display: flex;
   align-items: center;
-  border: var(--border-color);
+  border: 1px solid var(--border-pramary-color);
+
   border-style: none none solid none;
-  border-radius: 1px;
 }
 
 .link-current {
@@ -579,6 +580,7 @@ body {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .work .item:nth-child(3n) {
@@ -589,11 +591,27 @@ body {
   margin-bottom: 0px;
 }
 
-.brd {
-  border: 1px solid var(--border-color);
-  border-top: transparent;
-  padding: 20px 24px;
+.work-link {
+  display: block;
+  background-color: var(--primary-white-color);
+}
+
+.work-link:hover,
+.work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.border-text {
   width: 370px;
+  padding: 20px 0 20px 25px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.work-image {
+  display: block;
 }
 
 /* social links */
