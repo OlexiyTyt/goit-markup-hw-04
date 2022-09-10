@@ -16,7 +16,8 @@ a {
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --adress-text-color: rgba(255, 255, 255, 0.6);
-  --border-color: #ececec;
+  --border-pramary-color: #ececec;
+  --border-secondary-color: #afb1b8;
   --opacity-bgc: rgba(47, 48, 58, 0.4);
   --font-weight400: 400;
   --font-weight500: 500;
@@ -50,7 +51,6 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
   padding-right: 15px;
-  padding-left: 15px;
 
   width: 1230px;
 }
@@ -77,12 +77,19 @@ body {
 .footer .link:hover,
 .footer .link:focus,
 .footer-logo:hover,
-.footer-logo:focus,
-.footer-link:hover,
-.footer-link:focus {
+.footer-logo:focus {
   color: var(--accent-text-color);
 }
 
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--primary-white-color);
+}
+
+.address .link:hover svg,
+.address .link:focus svg {
+  fill: var(--accent-text-color);
+}
 /* site-nav */
 
 .container {
@@ -146,12 +153,23 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .address .link {
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
 
   color: var(--secondary-text-color);
+}
+.contact-image {
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
+}
+
+.address .item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .address .item:not(:last-child) {
@@ -333,6 +351,58 @@ body {
   margin-bottom: 30px;
 }
 
+/* clients list */
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+}
+
+.clients .item {
+  width: calc((100%-150px) / 6);
+}
+
+.clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  border: 1px solid var(--border-secondary-color);
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: var(--border-secondary-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-container {
+  width: 1170px;
+  height: 184px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-text-color);
+}
+
+.clients-link:hover svg,
+.clients-link:focus svg {
+  fill: var(--accent-text-color);
+}
+
 /* button */
 
 .hero-button {
@@ -391,6 +461,8 @@ body {
 
 /* footer */
 .footer {
+  display: flex;
+  justify-content: flex-start;
   background-color: var(--footer-background-color);
   letter-spacing: 0.03em;
   padding-top: 60px;
@@ -427,6 +499,31 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.agitation {
+  color: var(--primary-white-color);
+  font-weight: var(--font-weight700);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.firstfooter {
+  width: 210px;
+  height: 120px;
+}
+
+.secondfooter {
+  width: 206px;
+  height: 80px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 514px;
+  margin-right: auto;
 }
 
 /* portfolio */
@@ -499,38 +596,7 @@ body {
   width: 370px;
 }
 
-.clients {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  align-items: center;
-}
-
-.clients .item {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-  width: calc((100%-150px) / 6);
-  height: 92px;
-  align-items: center;
-}
-.clients .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients-icon {
-  width: 106px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.clients-container {
-  width: 1170px;
-  height: 184px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* social links */
 
 .social {
   display: flex;
@@ -541,7 +607,7 @@ body {
   height: 44px;
 }
 
-.list-item.item:not(:last-child) {
+.list-item .item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -552,12 +618,13 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--secondary-background-color);
+  background: var(--primary-white-color);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-text-color);
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
 }
 
 .social-link:hover svg,
@@ -567,4 +634,17 @@ body {
 
 .social-image {
   fill: var(--secondary-text-color);
+}
+
+.secondfooter .social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.secondfooter .social-link:hover,
+.secondfooter .social-link:focus {
+  background-color: var(--accent-text-color);
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+}
+.secondfooter .social-image {
+  fill: var(--primary-white-color);
 }
